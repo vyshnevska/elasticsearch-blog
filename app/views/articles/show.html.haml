@@ -1,0 +1,7 @@
+%strong='Title:'
+= @article.title
+%p
+  %strong= 'Content'
+  = @article.content
+
+= link_to '<- Back', articles_path

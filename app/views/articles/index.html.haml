@@ -1,0 +1,11 @@
+%h1>Articles
+
+%ul
+  - @articles.each do |article|
+    %li
+      %h3
+        = article.title
+      %p
+        = article.content
+
+= link_to 'New Article', new_article_path
