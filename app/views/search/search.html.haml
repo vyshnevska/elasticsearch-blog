@@ -10,4 +10,8 @@
   - @articles.each do |article|
     %li
       %h3
-        = link_to article.title, controller: "articles", action: "show", id: article._id
+        = link_to article.try(:highlight).try(:title) ? article.highlight.title[0].html_safe : article.title,
+          controller: "articles", action: "show", id: article._id
+      - if article.try(:highlight).try(:content)
+        - article.highlight.content.each do |snippet|
+          %p= "#{snippet.html_safe} ..."

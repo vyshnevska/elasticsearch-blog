@@ -5,7 +5,7 @@ class Article < ActiveRecord::Base
 
   settings index: { number_of_shards: 1 } do
     mappings dynamic: 'false' do
-      indexes :title, analyzer: 'english'
+      indexes :title, analyzer: 'english', index_options: 'offsets'
       indexes :content, analyzer: 'english'
     end
   end
@@ -17,6 +17,14 @@ class Article < ActiveRecord::Base
           multi_match: {
             query: query,
             fields: ['title^10', 'content']
+          }
+        },
+        highlight: {
+          pre_tags: ['<em>'],
+          post_tags: ['</em>'],
+          fields: {
+            title: {},
+            text: {}
           }
         }
       }
