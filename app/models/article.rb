@@ -24,7 +24,7 @@ class Article < ActiveRecord::Base
           post_tags: ['</em>'],
           fields: {
             title: {},
-            text: {}
+            content: {}
           }
         }
       }

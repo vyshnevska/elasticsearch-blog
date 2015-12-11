@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :articles
+  resources :articles do
+    collection { get :search }
+  end
   get 'search', to: 'search#search'
 end

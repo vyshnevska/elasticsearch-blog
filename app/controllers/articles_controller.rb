@@ -10,6 +10,11 @@ class ArticlesController < ApplicationController
   def new
   end
 
+  def search
+    @articles = Article.search params[:q]
+    render action: "index"
+  end
+
   def create
     @article = Article.new(article_params)
     if @article.save
