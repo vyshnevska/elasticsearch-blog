@@ -3,4 +3,5 @@ Rails.application.routes.draw do
     collection { get :search }
   end
   get 'search', to: 'search#search'
+  root to: 'articles#index', as: '/'
 end
