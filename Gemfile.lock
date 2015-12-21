@@ -36,6 +36,7 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    ansi (1.5.0)
     arel (6.0.3)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
@@ -59,6 +60,9 @@ GEM
       elasticsearch-transport (= 1.0.14)
     elasticsearch-api (1.0.14)
       multi_json
+    elasticsearch-extensions (0.0.20)
+      ansi
+      ruby-prof
     elasticsearch-model (0.1.6)
       activesupport (> 3)
       elasticsearch (> 0.4)
@@ -171,6 +175,7 @@ GEM
       rspec-mocks (~> 3.4.0)
       rspec-support (~> 3.4.0)
     rspec-support (3.4.1)
+    ruby-prof (0.15.9)
     ruby_parser (3.7.2)
       sexp_processor (~> 4.1)
     sass (3.4.19)
@@ -229,6 +234,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 4.1.0)
   database_cleaner
+  elasticsearch-extensions
   elasticsearch-model
   elasticsearch-rails
   factory_girl_rails

@@ -33,6 +33,7 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'elasticsearch-extensions'
   gem 'database_cleaner'
   gem 'shoulda-matchers', '3.0'
   gem 'timecop'
