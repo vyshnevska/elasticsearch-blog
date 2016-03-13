@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 gem 'rails', '4.2.4'
 gem 'sqlite3'
 
@@ -19,7 +18,7 @@ gem 'elasticsearch-rails'
 
 gem "twitter-bootstrap-rails"
 
-
+gem 'devise'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
