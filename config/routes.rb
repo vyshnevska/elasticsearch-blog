@@ -6,5 +6,5 @@ Rails.application.routes.draw do
 
   post 'search', to: 'search#search'
 
-  root to: 'articles#index', as: '/'
+  root to: 'articles#index'
 end
