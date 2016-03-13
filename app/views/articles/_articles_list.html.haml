@@ -1,8 +1,9 @@
 - @articles.each do |article|
+  - image_content = article.image? ? article.image_url(:thumb) : 'sample_overlay'
   .box.panel.panel-default
-    = link_to (image_tag 'sample_overlay', size: '70'), article_path(article)
+    = link_to (image_tag image_content, size: '150'), article_path(article)
     .panel-body
-      - if  article.try(:highlight)
+      - if article.try(:highlight)
         %h2= link_to article.highlight.title[0].html_safe, article_path(article)
         %span= link_to article.highlight.content[0].html_safe, article_path(article)
       - else

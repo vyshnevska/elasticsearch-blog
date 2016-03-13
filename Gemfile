@@ -21,6 +21,8 @@ gem 'masonry-rails', '~> 0.2.1'
 
 gem 'devise'
 
+gem "mini_magick"
+gem "carrierwave"
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'
   gem 'pry'
