@@ -17,6 +17,7 @@ gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
 
 gem "twitter-bootstrap-rails"
+gem 'masonry-rails', '~> 0.2.1'
 
 gem 'devise'
 
