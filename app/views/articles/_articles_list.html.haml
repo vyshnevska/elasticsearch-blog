@@ -1,0 +1,14 @@
+- @articles.each do |article|
+  %tr
+    %td= link_to article.id, article_path(article)
+    %td= article.try(:highlight).try(:title) ? article.highlight.title[0].html_safe : article.title
+    %td
+      - if article.try(:highlight).try(:content)
+        - article.highlight.content.each do |snippet|
+          = snippet.html_safe
+      - else
+        = article.content
+    %td= article.created_at
+    %td
+      = link_to t('.edit', :default => t("helpers.links.edit")), edit_article_path(article), :class => 'btn btn-default btn-xs'
+      = link_to t('.destroy', :default => t("helpers.links.destroy")), article_path(article), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
