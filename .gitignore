@@ -19,3 +19,5 @@
 *.DS_Store
 *.swp
 *.orig
+
+database.yml
