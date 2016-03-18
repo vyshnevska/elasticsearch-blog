@@ -6,3 +6,8 @@ $ ->
     $('#articles').masonry
       itemSelector: '.box'
       isFitWidth: true
+
+
+  $('#article_search').typeahead
+    name: "article"
+    remote: "/autocomplete?q=%QUERY"

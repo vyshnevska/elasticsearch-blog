@@ -2,9 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  resources :articles
+  resources :articles, only: [:index, :create, :new, :show]
 
-  post 'search', to: 'search#search'
+  post 'search',      to: 'search#search'
+  get 'autocomplete', to: 'search#autocomplete'
 
   root to: 'articles#index'
 end

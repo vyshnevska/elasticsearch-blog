@@ -15,6 +15,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+gem 'searchkick'
 
 gem "twitter-bootstrap-rails"
 gem 'masonry-rails', '~> 0.2.1'

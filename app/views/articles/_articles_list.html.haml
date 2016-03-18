@@ -3,9 +3,5 @@
   .box.panel.panel-default
     = link_to (image_tag image_content, size: '150'), article_path(article)
     .panel-body
-      - if article.try(:highlight)
-        %h2= link_to article.highlight.title[0].html_safe, article_path(article)
-        %span= link_to article.highlight.content[0].html_safe, article_path(article)
-      - else
-        %h2= link_to article.title, article
-        %span= link_to article.content, article
+      %h2= link_to article.title, article
+      %span= link_to article.content, article
