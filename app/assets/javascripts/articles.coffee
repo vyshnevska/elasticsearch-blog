@@ -14,12 +14,6 @@ $ ->
       itemSelector: '.box'
       isFitWidth: true
 
-  # initialize again after async paginate
-  $(document).ajaxComplete ->
-    $('#articles-container-data').masonry
-      itemSelector: '.box'
-      isFitWidth: true
-
   # -- End Masonry layout --
 
   $('#article_search').typeahead

@@ -21,3 +21,6 @@
 *.orig
 
 database.yml
+
+public/assets
+public/uploads

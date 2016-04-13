@@ -2,7 +2,10 @@
   - @articles.each do |article|
     - image_content = article.image? ? article.image_url(:thumb) : 'sample_overlay'
     .box.panel.panel-default
-      = link_to (image_tag image_content, size: '150'), article_path(article)
+      - if article.id == 1
+        %svg#graph
+      - else
+        = link_to (image_tag image_content, size: '95'), article_path(article)
       .panel-body
         %h2= link_to article.title, article
         %span= link_to article.content, article
