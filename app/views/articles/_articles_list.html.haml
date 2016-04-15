@@ -1,7 +1,7 @@
 #articles-container-data
   - @articles.each do |article|
     - image_content = article.image? ? article.image_url(:thumb) : 'sample_overlay'
-    .box.panel.panel-default
+    .col-xs-6.col-md-4.box.panel.panel-default
       - if article.id == 1
         %svg#graph
       - else

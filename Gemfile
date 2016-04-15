@@ -21,6 +21,8 @@ gem 'searchkick'
 gem "twitter-bootstrap-rails"
 gem 'masonry-rails', '~> 0.2.1'
 
+gem 'highcharts-rails'
+
 gem 'devise'
 
 gem "mini_magick"

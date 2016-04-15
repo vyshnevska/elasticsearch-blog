@@ -8,7 +8,7 @@ var nodes = [], labelAnchors = [], labelAnchorLinks = [], links = [];
 
 $(document).ready(function(){
   // Fetch data
-  d3.json("/articles/graph_data", function(data) {
+  d3.json("/articles/nodes_graph_data", function(data) {
     var chart = d3.select("#graph").attr("width", width).attr("height", height);
 
     prepareNodesData(data);

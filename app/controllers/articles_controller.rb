@@ -22,7 +22,19 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def graph_data
+  def dots_chart
+    render 'chart.html'
+  end
+
+  def dots_chart_data
+    render json: [{
+                    data: [49.9, 71.5, 106.4, 129.2, 144.0, 176.0, 135.6, 148.5, 216.4, 194.1, 95.6, 54.4]
+                  }, {
+                    data: [39.9, 31.5, 96.4, 29.2, 94.0, 176.0, 135.6, 198.5, 216.4, 94.1, 195.6, 4.4]
+                  }]
+  end
+
+  def nodes_graph_data
     json_data = { links: [
                     { source: 1, target: 0, weight: rand(0..1.0) },
                     { source: 0, target: 2, weight: rand(0..1.0) },

@@ -4,7 +4,9 @@ Rails.application.routes.draw do
 
   resources :articles, only: [:index, :create, :new, :show] do
     collection do
-      get :graph_data
+      get :nodes_graph_data
+      get :dots_chart
+      get :dots_chart_data
     end
   end
 

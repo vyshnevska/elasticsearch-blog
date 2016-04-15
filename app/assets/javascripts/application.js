@@ -14,5 +14,7 @@
 //= require jquery_ujs
 //= require twitter/bootstrap
 //= require masonry/jquery.masonry
+//= require highcharts
+//= require highcharts/highcharts-more
 //= require turbolinks
 //= require_tree .
