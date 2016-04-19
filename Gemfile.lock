@@ -1,3 +1,9 @@
+PATH
+  remote: lib/engines/dashboard
+  specs:
+    dashboard (0.0.1)
+      rails (~> 4.2.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -261,6 +267,7 @@ PLATFORMS
 DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.1.0)
+  dashboard!
   database_cleaner
   devise
   elasticsearch-extensions

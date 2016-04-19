@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   get 'autocomplete', to: 'search#autocomplete'
 
   root to: 'articles#index'
+
+  mount Dashboard::Engine, at: "/dashboard", :as => "dashboard_engine"
 end
