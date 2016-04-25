@@ -14,7 +14,6 @@ class ArticlesController < ApplicationController
 
   def create
     @article = Article.new(article_params)
-
     if @article.save
       redirect_to @article
     else
@@ -23,7 +22,6 @@ class ArticlesController < ApplicationController
   end
 
   def dots_chart
-    render 'chart.html'
   end
 
   def dots_chart_data
