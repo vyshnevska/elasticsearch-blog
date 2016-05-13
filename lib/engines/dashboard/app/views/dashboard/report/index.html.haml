@@ -1,0 +1,10 @@
+<h1>Report#index</h1>
+
+.row.search-row
+  Search control:
+  %input{ type: "text", class: "filtr-search", name: "filtr-search", :'data-search'=> true }
+
+= react_component 'NavigationTabs', { navigation_tabs: @navigation_tabs }
+
+#content
+  %h1= 'Some content goes here!'

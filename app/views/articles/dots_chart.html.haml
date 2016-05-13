@@ -1,0 +1,11 @@
+:javascript
+  $(function() {
+      //Initialize filterizr with default options
+      $('.filtr-container').filterizr();
+  });
+
+
+#container
+  %span= "Chart Types"
+  = select_tag 'chart_type', options_for_select(['--Select Chart Type--', 'spline', 'line'])
+
