@@ -6,6 +6,7 @@ PATH
       jquery-rails
       rails (~> 4.2.4)
       react-rails
+      twitter-bootstrap-rails
 
 GEM
   remote: https://rubygems.org/
