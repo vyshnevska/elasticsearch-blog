@@ -1,0 +1,35 @@
+.dynamicTile .col-sm-4.col-xs-8 { padding: 5px; }
+
+.dynamicTile .col-sm-2.col-xs-4 { padding: 5px; }
+
+.carousel { position: relative; }
+
+.carousel-inner {
+  height: 185px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.item { height: 185px; }
+
+.text-center { text-align: center; }
+
+.bigicon {
+  font-size: 67px;
+  color: white;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.fa {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icontext {
+  color: white;
+  font-size: 22px;
+}

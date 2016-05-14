@@ -1,17 +1,13 @@
-/*
-  Place all the styles related to the matching controller here.
-  They will automatically be included in application.css.
-*/
-
-.panel-body { min-height: 200px }
-
+/* ---- Main ---- */
 .container {
   width: 100%;
-  max-width: 700px;
+  max-width: 1700px;
   margin: 2em auto !important;
 }
+/* ---- End Main ---- */
 
-/* ---- Tiles ---- */
+
+/* ---- Tiles Matrix ---- */
   .tile_item {
     margin: 15px;
     padding: 0;
@@ -26,4 +22,9 @@
     min-height: 85px;
     padding: 5px 10px;
   }
-/* ---- Tiles ---- */
+/* ---- End Tiles Matrix ---- */
+
+
+/* ---- Date Filter Box ---- */
+.panel-body { min-height: 200px }
+/* ---- End Date Filter Box ---- */

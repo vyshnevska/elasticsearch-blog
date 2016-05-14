@@ -1,9 +1,20 @@
+- icon_classes = ['calendar-o', 'bar-chart', 'balance-scale', 'area-chart', 'line-chart', 'pie-chart']
+- tile_colors = ['#EACF46', '#FFED94', '#7C91C7', '#3B579D', '#153178', '#03133C']
+
 .container
+  .dynamicTile
+    .row
+      = render 'dashboard/shared/tiles/medium_tile', tile_id: 7
+      = render 'dashboard/shared/tiles/small_tile',  tile_id: 8
+      = render 'dashboard/shared/tiles/small_tile',  tile_id: 9
+      = render 'dashboard/shared/tiles/medium_tile', tile_id: 10
+    .row
+      - 1...6.times do |i|
+        = render 'dashboard/shared/tiles/small_tile', tile_id: i+1 , icon_classes: icon_classes, tile_style: { color: tile_colors.sample }
   .row
     - 1..9.times do |i|
       = render 'tile_item', index: i
+
   .row
     .col-md-10
-      .panel.panel-default
-        .panel-body
-          = react_component 'NavigationTabs', { navigation_tabs: @navigation_tabs }
+      = render 'date_filter_box'

@@ -1,0 +1,29 @@
+- tile_id      ||= 1
+- icon_classes ||=  ['space-shuttle']
+- tile_style   ||= { color: '#EACF46' }
+
+.col-sm-2.col-xs-4
+  .tile{ id: "tile##{tile_id}", style: "background: #{tile_style[:color]}" }
+    .carousel.slide{ data:{ ride: 'carousel' } }
+      .carousel-inner
+        .item.active.text-center
+          %div
+            %span.fa.bigicon{ class: "fa-#{icon_classes.sample}" }
+          .icontext
+            ReportType
+          .icontext
+            Slide #1
+        .item.text-center
+          %div
+            %span.fa.bigicon{ class: "fa-#{icon_classes.sample}" }
+          .icontext
+            ReportType
+          .icontext
+            Slide #2
+        .item.active.text-center
+          %div
+            %span.fa.bigicon{ class: "fa-#{icon_classes.sample}" }
+          .icontext
+            ReportType
+          .icontext
+            Slide #3
