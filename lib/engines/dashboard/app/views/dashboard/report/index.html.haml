@@ -1,12 +1,9 @@
-<h1>Report#index</h1>
-
-.container-fluid
+.container
   .row
-    .col-xs-1
-      &nbsp
+    - 1..9.times do |i|
+      = render 'tile_item', index: i
+  .row
     .col-md-10
       .panel.panel-default
         .panel-body
           = react_component 'NavigationTabs', { navigation_tabs: @navigation_tabs }
-    .col-xs-1
-      &nbsp

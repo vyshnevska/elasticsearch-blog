@@ -1,0 +1,10 @@
+- colors = ['#40B17F', '#325BB3', '#EEC73A', '#FDA929', '#FD9332', '#C74AA3', '#90DBCD']
+- simple_text = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est"
+
+
+.col-md-3.tile_item
+  .tile_header{ style: "background: #{colors.sample}" }
+    .caption
+      = link_to "Box #{index}", '#'
+  .tile_content
+    = simple_text.truncate(30 + rand(30))
