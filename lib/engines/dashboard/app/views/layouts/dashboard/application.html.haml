@@ -1,0 +1,18 @@
+!!!
+%html{ lang: I18n.locale }
+  %head
+    %meta{ charset: 'utf-8' }
+    = stylesheet_link_tag "dashboard/application", media: "all"
+    = javascript_include_tag "dashboard/application"
+    = csrf_meta_tags
+  %body{ class: ["#{controller_name}_controller", "#{controller_name}_#{action_name}"] }
+    .container
+      .panel.panel-warning
+        .panel-heading
+          %h4.panel-title
+            = 'Dashboard Engine'
+        .panel-body
+          = yield
+      %ul.pager
+        %li= link_to '←Back to Main', '#'
+        %li= link_to 'Back to Dashboard →', '#'

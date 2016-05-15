@@ -1,0 +1,16 @@
+= form_for Dashboard::AnalyticReport.new, html: { class: 'form-horizontal' } do |f|
+  .form-group
+    %label{ for: 'analytic_report_name', class: 'col-sm-2 control-label'}
+      = 'Name'
+    .col-sm-10
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    %label{ for: 'analytic_report_description', class: 'col-sm-2 control-label'}
+      = 'Description'
+    .col-sm-10
+      = f.text_field :description, class: 'form-control'
+  .form-group
+    %label{ for: 'analytic_report_type', class: 'col-sm-2 control-label'}
+      = 'Type'
+    .col-sm-10
+      = f.select :type, Dashboard::AnalyticReport::TYPES, {}, { class: 'form-control'}

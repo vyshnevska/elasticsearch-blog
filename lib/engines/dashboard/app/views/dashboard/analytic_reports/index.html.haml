@@ -1,0 +1,7 @@
+.row
+  - 1..9.times do |i|
+    = render 'tile_item', index: i
+
+.row
+  .col-md-10
+    = render 'date_filter_box'

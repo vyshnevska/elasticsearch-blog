@@ -1,0 +1,16 @@
+- icon_classes = ['calendar-o', 'bar-chart', 'balance-scale', 'area-chart', 'line-chart', 'pie-chart']
+- tile_colors = ['#EACF46', '#FFED94', '#7C91C7', '#3B579D', '#153178', '#03133C']
+
+= link_to 'Add Report', new_analytic_report_path, { class: 'btn btn-primary', data: { toggle: :modal, target: '#analytic_report_modal' }, remote: true }
+
+= render 'dashboard/analytic_reports/analytic_report_modal'
+
+.dynamicTile
+  .row
+    = render 'dashboard/shared/tiles/medium_tile', tile_id: 7
+    = render 'dashboard/shared/tiles/small_tile',  tile_id: 8
+    = render 'dashboard/shared/tiles/small_tile',  tile_id: 9
+    = render 'dashboard/shared/tiles/medium_tile', tile_id: 10
+  .row
+    - 1...6.times do |i|
+      = render 'dashboard/shared/tiles/small_tile', tile_id: i+1 , icon_classes: icon_classes, tile_style: { color: tile_colors.sample }

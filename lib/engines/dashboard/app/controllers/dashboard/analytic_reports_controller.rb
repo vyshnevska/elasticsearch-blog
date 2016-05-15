@@ -1,7 +1,7 @@
 require_dependency "dashboard/application_controller"
 
 module Dashboard
-  class ReportController < ApplicationController
+  class AnalyticReportsController < ApplicationController
 
     def index
       @navigation_tabs = [
@@ -10,5 +10,15 @@ module Dashboard
         { id: 3, name: '1 month', url: 'one_month' }
       ]
     end
+
+    def create
+      @analytic_report = AnalyticReport.create(analytic_report_params)
+      render 'dashboard/index'
+    end
+
+    private
+      def analytic_report_params
+        params.permit(:name, :description, :type)
+      end
   end
 end
