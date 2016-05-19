@@ -12,13 +12,15 @@ module Dashboard
     end
 
     def create
-      @analytic_report = AnalyticReport.create(analytic_report_params)
-      render 'dashboard/index'
+      @analytic_report = AnalyticReport.create!(analytic_report_params)
+      @analytic_reports = AnalyticReport.all
+
+      redirect_to root_path
     end
 
     private
       def analytic_report_params
-        params.permit(:name, :description, :type)
+        params.permit(analytic_report: [:name, :report_type, :description])['analytic_report']
       end
   end
 end

@@ -12,5 +12,5 @@
     = render 'dashboard/shared/tiles/small_tile',  tile_id: 9
     = render 'dashboard/shared/tiles/medium_tile', tile_id: 10
   .row
-    - 1...6.times do |i|
-      = render 'dashboard/shared/tiles/small_tile', tile_id: i+1 , icon_classes: icon_classes, tile_style: { color: tile_colors.sample }
+    - @analytic_reports.each_with_index do |analytic_report, index|
+      = render 'dashboard/shared/tiles/small_tile', analytic_report: analytic_report, tile_id: index+1 , icon_classes: icon_classes, tile_style: { color: tile_colors.sample }

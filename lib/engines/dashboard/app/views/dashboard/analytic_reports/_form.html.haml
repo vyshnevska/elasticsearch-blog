@@ -3,7 +3,7 @@
     %label{ for: 'analytic_report_name', class: 'col-sm-2 control-label'}
       = 'Name'
     .col-sm-10
-      = f.text_field :name, class: 'form-control'
+      = f.text_field 'name', class: 'form-control'
   .form-group
     %label{ for: 'analytic_report_description', class: 'col-sm-2 control-label'}
       = 'Description'
@@ -13,4 +13,7 @@
     %label{ for: 'analytic_report_type', class: 'col-sm-2 control-label'}
       = 'Type'
     .col-sm-10
-      = f.select :type, Dashboard::AnalyticReport::TYPES, {}, { class: 'form-control'}
+      = f.select :report_type, Dashboard::AnalyticReport.report_types, {}, { class: 'form-control'}
+  .modal-footer
+    %button.btn{ 'aria-hidden' => "true", 'data-dismiss' => "modal"} Close
+    = f.submit 'Save changes', class: 'btn btn-primary'

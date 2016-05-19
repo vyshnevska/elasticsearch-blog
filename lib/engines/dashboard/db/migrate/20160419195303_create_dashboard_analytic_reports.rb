@@ -4,6 +4,7 @@ class CreateDashboardAnalyticReports < ActiveRecord::Migration
       t.string :name
       t.text :description
       t.text :parameters
+      t.string :report_type, limit: 50
 
       t.timestamps null: false
     end
