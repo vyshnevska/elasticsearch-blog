@@ -1,0 +1,32 @@
+/* ---- Tiles Matrix ---- */
+  .tile_item {
+    margin: 15px;
+    padding: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+  }
+
+  .tile_header {
+    height: 45px;
+    text-align: center;
+    border-bottom: 1px solid #151515;
+    border-bottom-style: dashed;
+    background-image: url('sep-half.png');
+    background-color: #c9c9c9;
+  }
+  .tile_content {
+    background: #fff;
+    padding: 5px 10px;
+  }
+  .tile_content p {
+    font-size: 14px;
+    line-height: 16px;
+    padding: 5px;
+  }
+  .amount{
+    display: inline;
+    font-size: 22px;
+    line-heigh: 1.5;
+    font-weight: bold;
+    vertical-align: middle;
+  }
+/* ---- End Tiles Matrix ---- */

@@ -3,6 +3,7 @@ PATH
   specs:
     dashboard (0.0.1)
       coffee-rails (~> 4.1.0)
+      highcharts-rails
       jquery-rails
       rails (~> 4.2.4)
       react-rails

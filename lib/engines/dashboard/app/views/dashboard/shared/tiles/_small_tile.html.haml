@@ -4,7 +4,7 @@
 
 - # TODO: pass analytic_report as param everywhere
 - type = local_assigns.has_key?(:analytic_report) ? analytic_report.try(:report_type) : 'ReportType'
-
+- report_path = local_assigns.has_key?(:analytic_report) ? analytic_report_path(analytic_report) : '#'
 .col-sm-2.col-xs-4
   .tile{ id: "tile##{tile_id}", style: "background: #{tile_style[:color]}" }
     .carousel.slide{ data:{ ride: 'carousel' } }
@@ -13,20 +13,20 @@
           %div
             %span.fa.bigicon{ class: "fa-#{icon_classes.sample}" }
           .icontext
-            = type
+            = link_to type, report_path
           .icontext
             Slide #1
         .item.text-center
           %div
             %span.fa.bigicon{ class: "fa-#{icon_classes.sample}" }
           .icontext
-            = type
+            = link_to type, report_path
           .icontext
             Slide #2
         .item.active.text-center
           %div
             %span.fa.bigicon{ class: "fa-#{icon_classes.sample}" }
           .icontext
-            = type
+            = link_to type, report_path
           .icontext
             Slide #3
