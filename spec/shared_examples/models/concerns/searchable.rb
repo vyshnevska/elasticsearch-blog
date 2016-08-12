@@ -2,19 +2,12 @@ RSpec.shared_examples 'a searchable' do
 
   let!(:article) { create described_class }
 
-  def search attributes = {}
-    Article.search(attributes)
-  end
+  before {  Article.reindex }
 
-  before do
-    Article.__elasticsearch__.create_index! index: Article.index_name
-    Article.import
-    sleep 1
-  end
+  specify('search by title'){ expect(search(q: 'some').records).to match [article] }
 
-  after {  Article.__elasticsearch__.client.indices.delete index: Article.index_name }
-
-  specify 'search by title' do
-    # expect(search(q: 'some').records).to match [article]
-  end
+  private
+    def search attributes = {}
+      Article.search(attributes)
+    end
 end

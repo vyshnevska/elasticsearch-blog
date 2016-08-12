@@ -21,6 +21,6 @@
 *.orig
 
 database.yml
-
+coverage/*
 public/assets
 public/uploads
