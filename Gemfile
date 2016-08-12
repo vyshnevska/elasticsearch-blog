@@ -28,7 +28,7 @@ gem 'devise'
 gem "mini_magick"
 gem "carrierwave"
 
-gem 'dashboard', path: 'lib/engines/dashboard'
+gem 'dashboard', path: '../dashboard'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0'

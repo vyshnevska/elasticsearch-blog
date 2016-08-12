@@ -1,5 +1,5 @@
 PATH
-  remote: lib/engines/dashboard
+  remote: ../dashboard
   specs:
     dashboard (0.0.1)
       coffee-rails (~> 4.1.0)
